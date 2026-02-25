@@ -17,7 +17,7 @@ export async function getSingleNote(req, res) {
         );
         if (!note) return res.status(404).json({ message: "Note note found" })
 
-        res.status(200).json(notes);
+        res.status(200).json(note);
     } catch (error) {
         console.error("Erreur dans le controller getSingleNote", error);
         res.status(500).send({ message: "Internal server error" });
